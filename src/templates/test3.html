@@ -1,0 +1,127 @@
+<!DOCTYPE HTML>
+<!--
+	Intensify by TEMPLATED
+	templated.co @templatedco
+	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
+-->
+
+<html>
+	<head>
+		<title>MBTI Test</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" href="{{ url_for('static', filename='css/mainAhhye.css') }}" />
+	</head>
+	<body class="subpage">
+
+		<!-- Header -->
+		<header id="header">
+			<nav class="left">
+				<a href="#menu"><span>Menu</span></a>
+			</nav>
+			<a href="index.html">
+				<img src="{{ url_for('static', filename='img/logo.png') }}" alt="놀면뭐hobby 로고" width="130.59" height="43"/>
+			</a>
+		</header>
+
+		<!-- Menu -->
+			<nav id="menu">
+				<ul class="links">
+					<li><a href="index.html">Home</a></li>
+					<li><a href="generic.html">Introduction</a></li>
+					<li><a href="elements.html">MBTI Types</a></li>
+					<li><a href="elements.html">Recommendations</a></li>
+					<li><a href="elements.html">Community</a></li>
+				</ul>
+			</nav>
+
+		<!-- Main -->
+			<section id="main" class="wrapper">
+				<div class="inner">
+					<header class="align-center">
+						<h1>MBTI Test</h1>
+						<p style="font-size:0.8em;">15개의 질문으로 유형에 맞는 취미를 추천해드립니다 :)</p>
+					</header>
+
+					<!-- Content -->
+						<div class="row" style="text-align:center;">
+							<div class="6u 12u$(small)" style="width:100%;padding-bottom:100px;">
+								<h3 style="padding-top:50px;">Q11.</h3>
+								<p style="font-weight:bold; font-size:1.1em">감정의 기복이 심할 때가 있습니다.</p>
+								<input type="radio" id="never11" name="q11"><label for="never11"><style="font-size:0.9em;">전혀 그렇지 않다.</label>
+								<input type="radio" id="hardly11" name="q11"><label for="hardly11"><style="font-size:0.9em;">그렇지 않다.</label>
+								<input type="radio" id="sometimes11" name="q11"><label for="sometimes11"><style="font-size:0.9em;">보통이다.</label>
+								<input type="radio" id="usually11" name="q11"><label for="usually11"><style="font-size:0.9em;">그렇다.</label>
+								<input type="radio" id="always11" name="q11"><label for="always11"><style="font-size:0.9em;">매우 그렇다.</label>
+							</div>
+							<div class="6u$ 12u$(small)" style="width:100%; padding-bottom: 100px;">
+								<h3>Q12.</h3>
+								<p style="font-weight:bold; font-size:1.1em">많은 사람들과 시간을 보낸 후에 에너지가 넘친다고 느낍니다.</p>
+								<input type="radio" id="never12" name="q12"><label for="never12"><style="font-size:0.9em;">전혀 그렇지 않다.</label>
+								<input type="radio" id="hardly12" name="q12"><label for="hardly12"><style="font-size:0.9em;">그렇지 않다.</label>
+								<input type="radio" id="sometimes12" name="q12"><label for="sometimes12"><style="font-size:0.9em;">보통이다.</label>
+								<input type="radio" id="usually12" name="q12"><label for="usually12"><style="font-size:0.9em;">그렇다.</label>
+								<input type="radio" id="always12" name="q12"><label for="always12"><style="font-size:0.9em;">매우 그렇다.</label>
+							</div>
+							<!-- Break -->
+							<div class="4u 12u$(medium)" style="width:100%; padding-bottom: 100px;">
+								<h3>Q13.</h3>
+								<p style="font-weight:bold; font-size:1.1em">공상과 아이디어 때문에 흥분하는 일은 없습니다.</p>
+								<input type="radio" id="never13" name="q13"><label for="never13"><style="font-size:0.9em;">전혀 그렇지 않다.</label>
+								<input type="radio" id="hardly13" name="q13"><label for="hardly13"><style="font-size:0.9em;">그렇지 않다.</label>
+								<input type="radio" id="sometimes13" name="q13"><label for="sometimes13"><style="font-size:0.9em;">보통이다.</label>
+								<input type="radio" id="usually13" name="q13"><label for="usually13"><style="font-size:0.9em;">그렇다.</label>
+								<input type="radio" id="always13" name="q13"><label for="always13"><style="font-size:0.9em;">매우 그렇다.</label>
+							</div>
+							<div class="4u 12u$(medium)" style="width:100%; padding-bottom: 100px;">
+								<h3>Q14.</h3>
+								<p style="font-weight:bold; font-size:1.1em">대체로 상상보다는 경험에 더 의존하는 편입니다.</p>
+								<input type="radio" id="never14" name="q14"><label for="never14"><style="font-size:0.9em;">전혀 그렇지 않다.</label>
+								<input type="radio" id="hardly14" name="q14"><label for="hardly14"><style="font-size:0.9em;">그렇지 않다.</label>
+								<input type="radio" id="sometimes14" name="q14"><label for="sometimes14"><style="font-size:0.9em;">보통이다.</label>
+								<input type="radio" id="usually14" name="q14"><label for="usually14"><style="font-size:0.9em;">그렇다.</label>
+								<input type="radio" id="always14" name="q14"><label for="always14"><style="font-size:0.9em;">매우 그렇다.</label>
+							</div>
+							<div class="4u$ 12u$(medium)" style="width:100%; padding-bottom: 100px;">
+								<h3>Q15.</h3>
+								<p style="font-weight:bold; font-size:1.1em">종종 사회적 상황에서 주도적으로 행동합니다.</p>
+								<input type="radio" id="never15" name="q15"><label for="never15"><style="font-size:0.9em;">전혀 그렇지 않다.</label>
+								<input type="radio" id="hardly15" name="q15"><label for="hardly15"><style="font-size:0.9em;">그렇지 않다.</label>
+								<input type="radio" id="sometimes15" name="q15"><label for="sometimes15"><style="font-size:0.9em;">보통이다.</label>
+								<input type="radio" id="usually15" name="q15"><label for="usually15"><style="font-size:0.9em;">그렇다.</label>
+								<input type="radio" id="always15" name="q15"><label for="always15"><style="font-size:0.9em;">매우 그렇다.</label>
+							</div>
+							<div style="width:100%;">
+								<a href="result.html" class="button small";>Submit</a>
+							</div>
+							<div style="width:100%; padding-top:50px; padding-bottom:100px;">
+								<a class="button small special";>3 / 3</a>
+							</div>
+						</div>
+				</div>
+			</section>
+
+		<!-- Footer -->
+		<footer id="footer">
+			<div class="inner">
+				<h2>Get In Touch</h2>
+				<ul class="actions">
+					<li><span class="icon fa-phone"></span> <a href="#">010-7417-4769</a></li>
+					<li><span class="icon fa-envelope"></span> <a href="#">knh4769@khu.ac.kr</a></li>
+					<li><span class="icon fa-map-marker"></span> 경기도 용인시 기흥구 덕영대로 1732 (경희대학교 국제캠퍼스)</li>
+				</ul>
+			</div>
+			<div class="copyright">
+				&copy; Untitled. Design <a href="https://templated.co">TEMPLATED</a>. Images <a href="https://unsplash.com">Unsplash</a>.
+			</div>
+		</footer>
+
+		<!-- Scripts -->
+		<script src="{{ url_for('static', filename='js/jquery.min.js') }}"></script>
+		<script src="{{ url_for('static', filename='js/jquery.scrolly.min.js') }}"></script>
+		<script src="{{ url_for('static', filename='js/skel.min.js') }}"></script>
+		<script src="{{ url_for('static', filename='js/util.js') }}"></script>
+		<script src="{{ url_for('static', filename='js/main.js') }}"></script>
+
+	</body>
+</html>

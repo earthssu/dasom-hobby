@@ -1,0 +1,89 @@
+<!DOCTYPE HTML>
+<!--
+	Intensify by TEMPLATED
+	templated.co @templatedco
+	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
+-->
+<html>
+	<head>
+		<title>놀면뭐hobby?</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" href="{{ url_for('static', filename='css/mainAhhye.css') }}" />
+		<script language="javascript">
+			function showPopup() {window.open("popup.html", "a", "width=400, height=300, left=100, top=50");}
+		</script>
+	</head>
+	<body>
+
+		<!-- Header -->
+			<header id="header">
+				<nav class="left">
+					<a href="#menu"><span>Menu</span></a>
+				</nav>
+				<a href="index.html">
+					<img src="{{ url_for('static', filename='img/logo.png') }}" alt="놀면뭐hobby 로고" width="130.59" height="43"/>
+				</a>
+			</header>
+
+		<!-- Menu -->
+			<nav id="menu">
+				<ul class="links">
+					<li><a href="index.html">Home</a></li>
+					<li><a href="generic.html">Introduction</a></li>
+					<li><a href="elements.html">MBTI Types</a></li>
+					<li><a href="elements.html">Recommendations</a></li>
+					<li><a href="elements.html">Community</a></li>
+				</ul>
+			</nav>
+
+		<!-- One -->
+			<section id="one" class="wrapper">
+				<div class="inner flex flex-3">
+					<div class="flex-item image fit round">
+						<img src="{{ url_for('static', filename='img/penguin.jpg') }}"/>
+					</div>
+					<div class="flex-item right">
+						<div style="text-align:center; padding-bottom:30px;">
+							<h3 style="padding-top:50px;">당신의 취미 MBTI 유형은</h3>
+							<h2 style="padding-bottom:20px;">에어컨 밑에서 독서하는 펭귄!</h2>
+								<div style="width:500px; font-weight: bold;">
+									<p>팩트보다는 의미가 더 중요한 당신에게는</p>
+									<p>차분히 앉아 시간을 보낼 수 있는 독서를 추천할게요 ( *˘╰╯˘)</p>
+									<p>끝까지 읽어야 한다는 부담은 버려요!</p>
+									<p>그만 읽고 싶다면 그대로 책을 덮어도 괜찮아요.</p>
+									<p>같은 글이라도 어떤 의미를 부여하느냐에 따라 180도 달라지는 것이 독서의 매력이에요 (੭*ˊᵕˋ)੭</p>
+									<p>선뜻 책을 읽고 싶은 마음이 들지 않는다면 시집부터 도전해보는 건 어때요?</p>
+								</div>
+						</div>
+						<div style="margin:0 auto; ">
+							<input class="button small" value="Copy URL" onclick="showPopup();"/>
+						</div>
+					</div>
+				</div>
+			</section>
+
+		<!-- Footer -->
+			<footer id="footer">
+				<div class="inner">
+					<h2>Get In Touch</h2>
+					<ul class="actions">
+						<li><span class="icon fa-phone"></span> <a href="#">010-7417-4769</a></li>
+						<li><span class="icon fa-envelope"></span> <a href="#">knh4769@khu.ac.kr</a></li>
+						<li><span class="icon fa-map-marker"></span> 경기도 용인시 기흥구 덕영대로 1732 (경희대학교 국제캠퍼스)</li>
+					</ul>
+				</div>
+				<div class="copyright">
+					&copy; Untitled. Design <a href="https://templated.co">TEMPLATED</a>. Images <a href="https://unsplash.com">Unsplash</a>.
+				</div>
+			</footer>
+
+		<!-- Scripts -->
+		<script src="{{ url_for('static', filename='js/jquery.min.js') }}"></script>
+		<script src="{{ url_for('static', filename='js/jquery.scrolly.min.js') }}"></script>
+		<script src="{{ url_for('static', filename='js/skel.min.js') }}"></script>
+		<script src="{{ url_for('static', filename='js/util.js') }}"></script>
+		<script src="{{ url_for('static', filename='js/main.js') }}"></script>
+
+	</body>
+</html>
