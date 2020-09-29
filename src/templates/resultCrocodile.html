@@ -12,6 +12,14 @@
 		<link rel="stylesheet" href="{{ url_for('static', filename='css/mainAhhye.css') }}" />
 		<script language="javascript">
 			function showPopup() {window.open("popup.html", "a", "width=400, height=300, left=100, top=50");}
+			function copyToClipboard() {
+				var obShareUrl = document.getElementById("copyURL");
+				obShareUrl.value = window.document.location.href;  // 현재 URL 을 세팅해 줍니다.
+				obShareUrl.select();  // 해당 값이 선택되도록 select() 합니다
+				document.execCommand("copy"); // 클립보드에 복사합니다.
+				obShareUrl.blur(); // 선택된 것을 다시 선택안된것으로 바꿈니다.
+				showPopup();
+			}
 		</script>
 	</head>
 	<body>
@@ -56,7 +64,7 @@
 								</div>
 						</div>
 						<div style="margin:0 auto; ">
-							<input class="button small" value="Copy URL" onclick="showPopup();"/>
+							<input class="button small" id="copyURL" value="Copy URL" onclick="copyToClipboard();"/>
 						</div>
 					</div>
 				</div>
