@@ -9,7 +9,7 @@
 		<title>놀면뭐hobby_콘텐츠추천</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="stylesheet" href="{{url_for('static',filename='css/mainNH.css')}}" />
 	</head>
 	<body class="subpage">
 
@@ -18,17 +18,17 @@
 				<nav class="left">
 					<a href="#menu"><span>Menu</span></a>
 				</nav>
-			<a href="index.html">
-					<img src="C:\Users\User\Desktop\놀면뭐하비\images\logo.png" alt="놀면뭐hobby 로고" width="130.59" height="43"/>
+			<a href="/">
+					<img src="{{url_for('static',filename='img/logo.png')}}" alt="놀면뭐hobby 로고" width="130.59" height="43"/>
 				</a>
 			</header>
 			
 		<!-- Menu -->
 			<nav id="menu">
 				<ul class="links">
-					<li><a href="index.html">Home</a></li>
+					<li><a href="/">Home</a></li>
 					<li><a href="generic.html">Generic</a></li>
-					<li><a href="elements.html">Elements</a></li>
+					<li><a href="/elements">Elements</a></li>
 				</ul>
 				<ul class="actions vertical">
 					<li><a href="#" class="button fit">Login</a></li>

@@ -6,10 +6,10 @@
 -->
 <html>
 	<head>
-		<title>놀면뭐hobby_취미자랑</title>
+		<title>놀면뭐hobby 취미 자랑</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="stylesheet" href="{{url_for('static',filename='css/mainNH.css')}}" />
 	</head>
 	<body class="subpage">
 
@@ -19,16 +19,16 @@
 					<a href="#menu"><span>Menu</span></a>
 				</nav>
 				<a href="index.html">
-					<img src="C:\Users\User\Desktop\놀면뭐하비\images\logo.png" alt="놀면뭐hobby 로고" width="130.59" height="43"/>
+					<img src="{{url_for('static',filename='img/logo.png')}}" alt="놀면뭐hobby 로고" width="130.59" height="43"/>
 				</a>
 			</header>
 
 		<!-- Menu -->
 			<nav id="menu">
 				<ul class="links">
-					<li><a href="index.html">Home</a></li>
+					<li><a href="/">Home</a></li>
 					<li><a href="generic.html">Generic</a></li>
-					<li><a href="elements.html">Elements</a></li>
+					<li><a href="/elements">Elements</a></li>
 				</ul>
 				
 			</nav>
@@ -48,7 +48,7 @@
 								<!-- Form -->
 									<h3>Form</h3>
 
-									<form method="post" action="#">
+									<form method="POST" action="/post">
 										<div class="row uniform">
 											<div class="6u 12u$(xsmall)">
 												<input type="text" name="name" id="name" value="" placeholder="Name" />
@@ -61,14 +61,14 @@
 												<div class="select-wrapper">
 													<select name="category" id="category">
 														<option value="">- 나의 취미 MBTI 유형 -</option>
-														<option value="1">땅끄부부 보면서 홈트하는 호랑이</option>
-														<option value="1">다음 생에 아이돌을 꿈꾸며 춤 추는 기린</option>
-														<option value="1">대나무 잎으로 풀피리를 연주하는 판다</option>
-														<option value="1">냄비를 태우면서 갈치 조림 요리하는 악어</option>
-														<option value="1">흔들의자에 앉아서 뜨개질하는 양</option>
-														<option value="1">에어컨 밑에서 독서하는 펭귄</option>
-														<option value="1">집사 옆에서 나초 먹으면서 영화보는 고양이</option>
-														<option value="1">클래식 음악 들으면서 꽃꽂이하는 토끼</option>
+														<option value="땅끄부부 보면서 홈트하는 호랑이">땅끄부부 보면서 홈트하는 호랑이</option>
+														<option value="다음 생에 아이돌을 꿈꾸며 춤 추는 기린">다음 생에 아이돌을 꿈꾸며 춤 추는 기린</option>
+														<option value="대나무 잎으로 풀피리를 연주하는 판다">대나무 잎으로 풀피리를 연주하는 판다</option>
+														<option value="냄비를 태우면서 갈치 조림 요리하는 악어">냄비를 태우면서 갈치 조림 요리하는 악어</option>
+														<option value="흔들의자에 앉아서 뜨개질하는 양">흔들의자에 앉아서 뜨개질하는 양</option>
+														<option value="에어컨 밑에서 독서하는 펭귄">에어컨 밑에서 독서하는 펭귄</option>
+														<option value="집사 옆에서 나초 먹으면서 영화보는 고양이">집사 옆에서 나초 먹으면서 영화보는 고양이</option>
+														<option value="클래식 음악 들으면서 꽃꽂이하는 토끼">클래식 음악 들으면서 꽃꽂이하는 토끼</option>
 
 
 													</select>
@@ -77,12 +77,12 @@
 										
 											<!-- Break -->
 											<div class="12u$">
-												<textarea name="message" id="message" placeholder="Enter your opinion" rows="6"></textarea>
+												<textarea name="content" id="content" placeholder="Enter your opinion" rows="6"></textarea>
 											</div>
 											<!-- Break -->
 											<div class="12u$">
 												<ul class="actions">
-													<li><input type="submit" onclick="location.href='elements.html'" value="Share My Hobby" /></li>
+													<li><input type="submit" value="Share My Hobby" /></li>
 													<li><input type="reset"  onclick="location.href='elements.html'" value="Back" class="alt" /></li>
 												</ul>
 											</div>

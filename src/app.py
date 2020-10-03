@@ -6,42 +6,45 @@ import time
 # 메인 페이지
 @app.route('/')
 def index():
-    return 'hello world'
+    return render_template('index.html')
 
 
 # 추천 콘텐츠
 @app.route('/recommend')
 def recommend():
-    return 'recommend'
+    return render_template('generic2.html')
 
+@app.route('/type')
+def type():
+    return render_template('generic1.html')
 
 # 취미 게시물 목록 페이지
-@app.route('/hobbylist')
-def hobby_list():
-    return 'hobby list'
+@app.route('/elements')
+def elements():
+    post_list = post_coll.find({})
+    return render_template('elements.html', post=post_list)
 
 
 # 취미 게시물 작성 페이지
 @app.route('/write')
 def write():
-    return 'write'
+    return render_template('elements1.html')
 
 
-# 취미 게시물 목록 페이지
-@app.route('/post', methods=['GET'])
+# 취미 게시물 업로드 페이지
+@app.route('/post', methods=['POST'])
 def save_post():
     name = request.form['name']
     email = request.form['email']
     category = request.form['category']
     content = request.form['content']
-    img = request.form['img']
 
     date_time = time.strftime('%Y-%m-%d %X', time.localtime(time.time()))
 
     post_coll.insert(
-        {'name': name, 'email': email, 'category': category, 'content': content, 'img': img, 'time': date_time})
+        {'name': name, 'email': email, 'category': category, 'content': content, 'time': date_time})
 
-    return redirect(url_for('hobby_list'))
+    return redirect(url_for('elements'))
 
 
 # 설문 페이지

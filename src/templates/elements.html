@@ -6,10 +6,10 @@
 -->
 <html>
 	<head>
-		<title>놀면뭐hobby_취미자랑</title>
+		<title>놀면뭐hobby 취미 자랑</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="stylesheet" href="{{url_for('static',filename='css/mainNH.css')}}" />
 	</head>
 	<body class="subpage">
 
@@ -19,7 +19,7 @@
 					<a href="#menu"><span>Menu</span></a>
 				</nav>
 				<a href="index.html">
-					<img src="C:\Users\User\Desktop\놀면뭐하비\images\logo.png" alt="놀면뭐hobby 로고" width="130.59" height="43"/>
+					<img src="{{url_for('static',filename='img/logo.png')}}" alt="놀면뭐hobby 로고" width="130.59" height="43"/>
 				</a>
 			</header>
 
@@ -44,59 +44,32 @@
 					</header>
 
 								<!-- Table -->
-									<h3>Table</h3>
-
-									<h4>Default</h4>
+									<h4>LIST</h4>
 									<div class="table-wrapper">
 										<table>
 											<thead>
 												<tr>
 													<th>Name</th>
-													<th>Description</th>
-													<th>Price</th>
+													<th>Category</th>
+													<th>Time</th>
 												</tr>
 											</thead>
 											<tbody>
+												{% for data in post %}
 												<tr>
-													<td>Item 1</td>
-													<td>Ante turpis integer aliquet porttitor.</td>
-													<td>29.99</td>
+													<td>{{ data.name }}</td>
+													<td>{{ data.category }}</td>
+													<td>{{ data.time }}</td>
 												</tr>
-												<tr>
-													<td>Item 2</td>
-													<td>Vis ac commodo adipiscing arcu aliquet.</td>
-													<td>19.99</td>
-												</tr>
-												<tr>
-													<td>Item 3</td>
-													<td> Morbi faucibus arcu accumsan lorem.</td>
-													<td>29.99</td>
-												</tr>
-												<tr>
-													<td>Item 4</td>
-													<td>Vitae integer tempus condimentum.</td>
-													<td>19.99</td>
-												</tr>
-												<tr>
-													<td>Item 5</td>
-													<td>Ante turpis integer aliquet porttitor.</td>
-													<td>29.99</td>
-												</tr>
+												{% endfor %}
 											</tbody>
-											<tfoot>
-												<tr>
-													<td colspan="2"></td>
-													<td>100.00</td>
-												</tr>
-											</tfoot>
 										</table>
 									</div>
-														<!-- Break -->
-											<div class="12u$">
-												<ul class="actions">
-													<li><input type="submit" onclick="location.href='elements1.html'" value="Share your hobby" /></li>
-												</ul>
-											</div>
+									<!-- Break -->
+									<div class="12u$ actions">
+										<button onclick="location.href='/write' ">write</button>
+									</div>
+									<br>
 
 								
 						
