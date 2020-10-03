@@ -48,6 +48,7 @@
 												<tr>
 													<th>Name</th>
 													<th>Category</th>
+													<th>Read</th>
 													<th>Time</th>
 												</tr>
 											</thead>
@@ -56,6 +57,12 @@
 												<tr>
 													<td>{{ data.name }}</td>
 													<td>{{ data.category }}</td>
+													<td>
+														<form method="POST", action="/content">
+															<input type="hidden" name="email" value="{{data.email}}">
+															<button type="submit" style="background-color: rgba(0,0,0,0); color: #767d85; width: 40px; text-align: center;">GO</button>
+														</form>
+													</td>
 													<td>{{ data.time }}</td>
 												</tr>
 												{% endfor %}

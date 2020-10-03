@@ -47,6 +47,13 @@ def save_post():
     return redirect(url_for('elements'))
 
 
+# 취미 게시물 자세히 보기
+@app.route('/content', methods=['POST'])
+def content():
+    email = request.form['email']
+    user_post = post_coll.find_one({'email': email})
+    return render_template('elements2.html', post=user_post)
+
 # 설문 페이지
 @app.route('/survey')
 def survey():

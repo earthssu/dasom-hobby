@@ -18,7 +18,7 @@
 				<nav class="left">
 					<a href="#menu"><span>Menu</span></a>
 				</nav>
-				<a href="index.html">
+				<a href="/">
 					<img src="{{url_for('static',filename='img/logo.png')}}" alt="놀면뭐hobby 로고" width="130.59" height="43"/>
 				</a>
 			</header>
@@ -26,9 +26,9 @@
 		<!-- Menu -->
 			<nav id="menu">
 				<ul class="links">
-					<li><a href="index.html">Home</a></li>
+					<li><a href="/">Home</a></li>
 					<li><a href="generic.html">MBTI Introduction</a></li>
-					<li><a href="elements.html">Show off your hobby</a></li>
+					<li><a href="/elements">Show off your hobby</a></li>
 				</ul>
 			</nav>
 
@@ -45,28 +45,20 @@
 
 							
 								<!-- Form -->
-
 									<div class="table-wrapper">
 										<table>
 											<tbody>
 												<tr>
-													<td>Title</td>
-													<td>Ante turpis integer aliquet porttitor.
-													<span style="float:right;width:155px;text-align:right;">
-													2020-10-03</span> <!-- 날짜 -->
-													</td>
-												</tr>
-												<tr>
 													<td>Name</td>
-													<td>Vis ac commodo adipiscing arcu aliquet.</td>
+													<td>{{ post.name }}</td>
 												</tr>
 												<tr>
 													<td>Email</td>
-													<td> Morbi faucibus arcu accumsan lorem.</td>
+													<td>{{ post.email }}</td>
 												</tr>
 												<tr>
 													<td>MBTI</td>
-													<td> Morbi faucibus arcu accumsan lorem.</td>
+													<td>{{ post.category }}</td>
 												</tr>
 											</tbody>
 										
@@ -75,7 +67,9 @@
 										
 											<!-- Break -->
 											<div class="12u$">
-												<textarea name="message" id="message" style="color:black" placeholder="Enter your opinion" rows="6"></textarea>
+												<textarea name="content" id="content" style="color:black;" placeholder="Enter your opinion" rows="6">
+													{{ post.content }}
+												</textarea>
 											</div>
 											<br>
 											<!-- Break -->
@@ -86,7 +80,7 @@
 												</ul>
 											</div>
 										</div>
-									</form>
+				</div>
 
 
 
