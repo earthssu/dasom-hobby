@@ -14,9 +14,11 @@ def index():
 def recommend():
     return render_template('generic2.html')
 
+
+# 유형 소개 페이지
 @app.route('/type')
 def type():
-    return render_template('generic1.html')
+    return render_template('MBTIintro.html')
 
 # 취미 게시물 목록 페이지
 @app.route('/elements')
