@@ -186,3 +186,10 @@ def cat():
 @app.route('/rabbit')
 def rabbit():
     return render_template('resultRabbit.html')
+
+
+# 팝업
+@app.route('/popup')
+def popup():
+    return render_template('popup.html')
+
