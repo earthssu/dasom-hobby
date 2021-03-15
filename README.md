@@ -5,6 +5,7 @@
 
 
 ##How To Use
+
 ##### 메인 화면
 ![hobby-01](https://user-images.githubusercontent.com/39795055/111159926-f387e180-85dc-11eb-9e28-c5d9856f6e5a.png)
 * '테스트 시작' 버튼을 통해 테스트 페이지로 이동할 수 있습니다.
@@ -19,9 +20,11 @@
 ![hobby-05](https://user-images.githubusercontent.com/39795055/111159937-f5ea3b80-85dc-11eb-82b6-d92ca0ccc11f.png)
 * 본인의 검사 결과와 취미를 사람들과 공유할 수 있습니다.
 
+
 ## How To Install
 1. Flask 설치
-<br>
-```pip install flask```
+```
+pip install flask
+```
 
 2. 'main.py' 실행
